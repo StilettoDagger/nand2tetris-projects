@@ -1,0 +1,56 @@
+/** This class is responsible for running the calculator application and handling user input */
+class CalculatorApp {
+    field Calculator calculator;
+    /** The constructor creates a new calculator object */
+    constructor CalculatorApp new() {
+        var Calculator newCalc;
+        let newCalc = Calculator.new();
+        let calculator = newCalc;
+        return this;
+    }
+
+    /** Starts the calculator program and keeps it running until the user hits Esc on the keyboard */
+    method void run() {
+        var boolean exit;
+        var char key;
+        var int input;
+        let exit = false;
+
+        while (~exit) {
+            let key = Keyboard.keyPressed();
+            if (key = 140)
+            {
+                let exit = true;
+            }
+            if (~(key = 0)) {
+                if (key = 48) {let input = 0; do calculator.updateScreen(input);}
+                if (key = 49) {let input = 1; do calculator.updateScreen(input);}
+                if (key = 50) {let input = 2; do calculator.updateScreen(input);}
+                if (key = 51) {let input = 3; do calculator.updateScreen(input);}
+                if (key = 52) {let input = 4; do calculator.updateScreen(input);}
+                if (key = 53) {let input = 5; do calculator.updateScreen(input);}
+                if (key = 54) {let input = 6; do calculator.updateScreen(input);}
+                if (key = 55) {let input = 7; do calculator.updateScreen(input);}
+                if (key = 56) {let input = 8; do calculator.updateScreen(input);}
+                if (key = 57) {let input = 9; do calculator.updateScreen(input);}
+                if ((key = 43) | (key = 45) | (key = 42) | (key = 47)) {do calculator.operate(key);}
+                if (key = 129) {
+                    do calculator.clearScreen();
+                    do calculator.reset();
+                    }
+                if (key = 128) {do calculator.calculate();}
+                do Sys.wait(500);
+                }
+        }
+        return;
+    }
+
+   /** Disposes the memory of both the calculator and the app itself, then clears the entire screen */ 
+    method void dispose() {
+        do calculator.clearScreen();
+        do calculator.dispose();
+        do Memory.deAlloc(this);
+        do Screen.clearScreen();
+        return;
+    }
+}

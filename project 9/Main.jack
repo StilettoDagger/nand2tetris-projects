@@ -1,0 +1,13 @@
+/** Main class for starting the calculator app and then freeing the memory after it's done running */
+
+class Main {
+    function void main() {
+        var CalculatorApp calc;
+        let calc = CalculatorApp.new();
+        do calc.run();
+        do calc.dispose();
+        do Output.printString("Goodbye!");
+        do Sys.wait(1000);
+        return;
+    }
+}

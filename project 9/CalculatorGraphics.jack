@@ -1,0 +1,27 @@
+/** This class is responsible for drawing the calculator graphics on the screen, */
+/** it also includes a function for drawing new buttons with specified locations. */
+
+class CalculatorGraphics {
+    /** Draws the calculator frame and the screen. */
+    function void drawCalculator() {
+        // Calculator Frame
+        do Screen.setColor(true); 
+        do Screen.drawRectangle(200, 20, 312, 236);
+        do Screen.setColor(false);
+        do Screen.drawRectangle(205, 25, 307, 231);
+        // Calculator Screen
+        do Screen.setColor(true);   
+        do Screen.drawRectangle(210, 25, 302, 55);
+        do Screen.setColor(false);
+        do Screen.drawRectangle(212, 27, 300, 53);
+	    return;
+    }
+    /** Function for drawing the buttons of a calculator, the function accepts input for the location of the button. */
+    function void drawButton(int x, int y) {
+        do Screen.setColor(true);
+        do Screen.drawRectangle(x, y, x+20, y+20);
+        do Screen.setColor(false);
+        do Screen.drawRectangle(x+2, y+2, x+18, y+18);
+        return;
+    }
+}
