@@ -1,8 +1,8 @@
 # About
 
-These are the projects that I have completed so far for the [Nand2tetris](https://www.coursera.org/learn/build-a-computer) (part 1 and 2) on Coursera
+These are software related projects that I have completed so far for the [Nand2tetris](https://www.coursera.org/learn/build-a-computer) (part 1 and 2) on Coursera
 
-I have only shared the coding related projects using Python which include:
+These projects were made using Python and they include:
 
 ### Nand2Tetris (part 1)
 - Project 6:  An assembler that converts an assembly language code (known as Hack assembly) into binary language that the computer system (Hack computer) can understand
